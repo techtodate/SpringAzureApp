@@ -18,7 +18,7 @@ class HelloController {
 
     @GetMapping("/hello")
     public String sayHello() {
-        return "Hello, Spring Boot App without DB!";
+        return "Hello, Spring Boot App without DB!TEST";
     }
 
 }
