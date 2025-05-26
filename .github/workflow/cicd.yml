@@ -35,6 +35,7 @@ on:
           app-name: SpringB-NoDB-App
           publish-profile: ${{secrets.azureWebAppPublishProfile}}
           package: '*.jar'
+          
 
 
 
