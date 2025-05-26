@@ -3,7 +3,7 @@ name: Deploy app to Azure app service
 on:
   push:
     branches:
-      - SpringAzureApp
+      - main
   build:
     runs-on: ubuntu-latest
     steps:
