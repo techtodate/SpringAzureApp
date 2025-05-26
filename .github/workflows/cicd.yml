@@ -18,7 +18,7 @@ jobs:
         - name: Build Project
           run: mvn clean install -DskipTests
         - name: Upload Artifact for Deploymnet job
-          uses: actions/upload-artifact@v2
+          uses: actions/upload-artifact@v3
           with:
               name: SpringB-NoDB-App
               path: ${{github.workspace}}/target/*.jar
@@ -27,11 +27,11 @@ jobs:
       needs: build
       steps:
           - name: Download artifact from build job
-            uses: actions/download-artifact@v2
+            uses: actions/download-artifact@v3
             with:
               name: SpringB-NoDB-App
           - name: deploy to azure app service
-            uses: azure/webapps-deploy@v2
+            uses: azure/webapps-deploy@v3
             with:
               app-name: SpringB-NoDB-App
               publish-profile: ${{secrets.azureWebAppPublishProfile}}
