@@ -13,10 +13,9 @@ public class App {
 }
 
 @RestController
-@RequestMapping("/api")
 class HelloController {
 
-    @GetMapping("/hello")
+    @GetMapping
     public String sayHello() {
         return "Hello, Spring Boot App without DB!TEST";
     }
